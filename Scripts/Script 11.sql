@@ -1,0 +1,1 @@
+SELECT Nome, (SELECT Genero FROM Generos WHERE Id = FilmesGenero.IdGenero AND FilmesGenero.Id = Filmes.Id) AS Genero WHERE Genero = "Mistério"

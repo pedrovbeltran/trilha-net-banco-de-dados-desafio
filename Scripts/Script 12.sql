@@ -1,0 +1,1 @@
+SELECT Nome, (SELECT Papel FROM ElencoFilme WHERE Filmes.Id = ElencoFilme.Id AND ElencoFilme.IdAtor = Id) AS PrimeiroNome, (SELECT UltimoNome FROM Atores WHERE Filmes.Id = ElencoFilme.Id AND ElencoFilme.IdAtor = Id) AS UltimoNome, (SELECT Papel FROM Atores WHERE Filmes.Id = Id) AS Papel FROM Filmes
